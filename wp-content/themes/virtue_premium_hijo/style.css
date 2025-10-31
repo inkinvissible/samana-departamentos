@@ -1,0 +1,238 @@
+/*
+   Theme Name: Hijo de Virtue Premium
+   Theme URI: http://www.kadencethemes.com/shop/
+   Version: 1
+   Description: Tema Hijo de Virtue Premium
+   Author: PatagoniaGlobal
+   Author URI: http://www.patagoniaglobal.com
+   Template: virtue_premium
+*/
+@import url("../virtue_premium/style.css");
+
+/* MAPA RESPONSIVE */
+
+/* Responsive iFrame */
+ 
+.responsive-iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+ 
+.responsive-iframe-container iframe,   
+.vresponsive-iframe-container object,  
+.vresponsive-iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* MENU SECUNDARIO */
+
+#nav-second ul.sf-menu ul li a {
+    width: auto;
+    display: block;
+    padding: 10px;
+    color: #555;
+    text-align: left;
+    font-size: 17px;
+}
+
+
+
+/* BANNER PROMO PAGINA DE INICIO */
+
+a.texto-color-samana {
+  color: #fff002;
+  background: #d3200a;
+  padding: 15px;
+  margin-bottom: 0px;
+  color: #fff;
+  text-align:center;
+ width:100%;
+ /* height:40px; */
+  display:table;
+  /* box-sizing:border-box; */
+}
+
+a.texto-color-samana:hover {
+    color: #ffffff;
+}
+
+a.texto-color-samana:focus, a.texto-color-samana:active, a.texto-color-samana:visited {
+    color: #fff002;
+}
+
+h4.texto-blanco {
+  color: ;
+}
+
+/* .atencion-personal {
+  background: #000080;
+  padding: 3px 6px;
+  /*margin-bottom: 40px;*/
+  color: #fff;
+  text-align:center;
+} */
+
+/* .boton-telefono {
+  background: #aa0000;
+  padding: 6px;
+  margin-bottom: 40px;
+  color: #fff;
+  text-align:center;
+} */
+
+/* 
+Generic Styling, for Desktops/Laptops 
+*/
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #530E05; 
+  color: white; 
+  font-weight: bold; 
+  width: 400px;
+}
+td { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+
+th {
+  padding: 6px; 
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+/*Cambiar el estilo del formulario de contacto*/
+
+.contactform input.full, .wpcf7 input, #kad-feedback-new-post input.full {
+    border: 1px solid #999;
+    border-radius: 6px;
+    box-sizing: border-box;
+    height: auto;
+    max-width: 570px;
+    padding: 8px;
+    width: 100%;
+    background-color: #40ED5E;
+}
+
+.contactform textarea, .wpcf7 textarea, #kad-feedback-new-post textarea {
+    border: 1px solid #999;
+    border-radius: 6px;
+    box-sizing: border-box;
+    height: auto;
+    margin-bottom: 10px;
+    max-width: 570px;
+    padding: 8px;
+    width: 100%;
+    background-color: #40ED5E;
+}
+
+textarea {
+    border-radius: 6px;
+    overflow: auto;
+    vertical-align: top;
+    background-color: #40ED5E;
+    border-radius: 6px;
+}
+
+/*Aumentar el tamaño de la fuente del botón de ENVIAR del formulario de contacto*/
+.wpcf7 input.wpcf7-submit {
+    font-size: 16px;
+ }
+ 
+/* ESTILOS GENERALES */
+
+p,h4 {
+text-align: justify;
+}
+
+h4.sintop {
+margin-top: 0px;
+}
+
+h1 {
+font-family: Oswald;
+line-height: 40px;
+font-weight: 400;
+font-style: normal;
+font-size: 38px;
+text-align: center;
+color: #530E05;
+}
+
+.img-agaleria {
+padding: 0px;
+}
+
+.img-acontacto {
+padding-top: 10px;
+padding-bottom: 0px;
+padding-left: 0px;
+padding-right: 0px;
+}
+
+img.sinmargensuperior {
+margin: 0px 0;
+}
+
+.page-header {
+border-top: none;
+border-bottom: none;
+border-color: rgba(0,0,0,.05);
+padding-bottom: 8px;
+margin: 0 0 20px;
+padding-top: 8px;
+}
+
+.margintop30 {
+margin-top: 30px;
+}
+
+.consultas {
+margin-top: 20px;
+color: #ffffff;
+text-align: center;
+font-family: 'Oswald';
+}
+
+a.consultasyreservas {
+margin-top: 40px;
+color: #ffffff;
+background: #D3200A;
+padding: 30px;
+}
+
+.footercredits p {
+text-align:right;
+font-size: 14px;
+padding: 4px 0;
+}
+
+a.fondoblanco:link {
+color: #fff;
+}
+
+a.fondoblanco:hover {
+color: #ffffff !important;
+padding: 3px;
+/*background-color: #bf9356;*/
+background-color: #530F06;
+}
+
+a.fondoblanco:visited {
+color: #ffffff;
+}
