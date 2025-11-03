@@ -872,6 +872,207 @@
         color: #ffffff;
         font-size: 16px;
     }</style>
+    <style>
+        .gallery-filter-section {
+            background: #fff;
+            padding: 30px;
+            border: 1px solid #ddd;
+            margin-bottom: 35px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .gallery-filter-section h3 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: left;
+            border-bottom: 2px solid #d3200a;
+            padding-bottom: 12px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            border: 1px solid #ccc;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .filter-btn {
+            background: #cf2e2e;
+            border: none;
+            border-bottom: 1px solid #e5e5e5;
+            color: white;
+            padding: 16px 24px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 400;
+            transition: all 0.2s ease;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            text-align: left;
+            position: relative;
+            letter-spacing: 0;
+        }
+
+        .filter-btn:last-child {
+            border-bottom: none;
+        }
+
+        .filter-btn:before {
+            content: '▸';
+            position: absolute;
+            left: 8px;
+            color: yellow;
+            transition: transform 0.2s ease;
+        }
+
+        .filter-btn:hover {
+            background: #f5f5f5;
+            color: #d3200a;
+        }
+
+        .filter-btn.active {
+            background: #a32323;
+            color: white;
+            font-weight: 900;
+            border-left: 3px solid #d3200a;
+            padding-left: 21px;
+        }
+
+        .filter-btn.active:before {
+            transform: rotate(90deg);
+            color: #d3200a;
+        }
+
+        .gallery-section {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+            margin-bottom: 40px;
+            clear: both;
+            position: relative;
+            width: 100%;
+        }
+
+        .gallery-section.active {
+            display: block !important;
+        }
+
+        .gallery-section .kad-wp-gallery {
+            clear: both;
+            overflow: visible;
+            position: relative;
+        }
+
+        .gallery-section .kad-wp-gallery::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .gallery-container {
+            min-height: 400px;
+            margin-bottom: 50px;
+            position: relative;
+            width: 100%;
+        }
+
+        /* Fix for isotope galleries */
+        .kad-wp-gallery .g_item {
+            position: relative;
+            float: left;
+        }
+
+        .kad-wp-gallery.init-isotope {
+            position: relative;
+        }
+
+        /* Ensure sections don't overlap */
+        body .gallery-section {
+            opacity: 1;
+        }
+
+        body .gallery-section:not(.active) {
+            display: none !important;
+            visibility: hidden;
+            height: 0;
+            overflow: hidden;
+        }
+
+        /* Add spacing between galleries when showing all */
+        .gallery-separator {
+            margin: 40px 0;
+            border: 0;
+            border-top: 2px solid #d3200a;
+            opacity: 0.2;
+            clear: both;
+        }
+
+        .gallery-section:not(.active) + .gallery-separator {
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gallery-section h4 {
+            background: linear-gradient(135deg, #d3200a 0%, #530e05 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            font-size: 22px;
+        }
+
+        .gallery-section h4 span {
+            color: white !important;
+        }
+
+        .gallery-count {
+            text-align: center;
+            color: #530e05;
+            font-size: 16px;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .filter-buttons {
+                max-width: 100%;
+            }
+
+            .filter-btn {
+                padding: 14px 20px;
+                font-size: 14px;
+            }
+
+            .filter-btn.active {
+                padding-left: 17px;
+            }
+
+            .gallery-filter-section {
+                padding: 20px 15px;
+            }
+
+            .gallery-section h4 {
+                font-size: 18px;
+                padding: 12px 18px;
+            }
+        }
+    </style>
     <!--[if lt IE 9]>
     <script src="https://www.samanadepartamentos.com.ar/wp-content/themes/virtue_premium/assets/js/vendor/respond.min.js"></script>
     <![endif]--></head>
@@ -962,188 +1163,17 @@
                     <div class="at-above-post-page addthis_tool"
                          data-url="https://www.samanadepartamentos.com.ar/alquiler-alojamiento-el-bolson-galeria-de-fotos/"></div>
                     
-                    <style>
-                        .gallery-filter-section {
-                            background: rgba(255, 255, 255, 0.95);
-                            padding: 25px 30px;
-                            border-radius: 12px;
-                            margin-bottom: 35px;
-                            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-                        }
-                        
-                        .gallery-filter-section h3 {
-                            color: #530e05;
-                            margin-bottom: 20px;
-                            font-size: 26px;
-                            text-align: center;
-                        }
-                        
-                        .filter-buttons {
-                            display: flex;
-                            flex-wrap: wrap;
-                            gap: 12px;
-                            justify-content: center;
-                            margin-bottom: 10px;
-                        }
-                        
-                        .filter-btn {
-                            background: white;
-                            border: 2px solid #d3200a;
-                            color: #d3200a;
-                            padding: 12px 25px;
-                            border-radius: 25px;
-                            cursor: pointer;
-                            font-size: 16px;
-                            font-weight: 600;
-                            transition: all 0.3s ease;
-                            font-family: 'Oswald', sans-serif;
-                            text-transform: uppercase;
-                            letter-spacing: 0.5px;
-                        }
-                        
-                        .filter-btn:hover {
-                            background: #d3200a;
-                            color: white;
-                            transform: translateY(-2px);
-                            box-shadow: 0 4px 12px rgba(211, 32, 10, 0.3);
-                        }
-                        
-                        .filter-btn.active {
-                            background: #d3200a;
-                            color: white;
-                            box-shadow: 0 4px 15px rgba(211, 32, 10, 0.4);
-                        }
-                        
-                        .gallery-section {
-                            display: none;
-                            animation: fadeIn 0.5s ease-in;
-                            margin-bottom: 40px;
-                            clear: both;
-                            position: relative;
-                            width: 100%;
-                        }
-                        
-                        .gallery-section.active {
-                            display: block !important;
-                        }
-                        
-                        .gallery-section .kad-wp-gallery {
-                            clear: both;
-                            overflow: visible;
-                            position: relative;
-                        }
-                        
-                        .gallery-section .kad-wp-gallery::after {
-                            content: "";
-                            display: table;
-                            clear: both;
-                        }
-                        
-                        .gallery-container {
-                            min-height: 400px;
-                            margin-bottom: 50px;
-                            position: relative;
-                            width: 100%;
-                        }
-                        
-                        /* Fix for isotope galleries */
-                        .kad-wp-gallery .g_item {
-                            position: relative;
-                            float: left;
-                        }
-                        
-                        .kad-wp-gallery.init-isotope {
-                            position: relative;
-                        }
-                        
-                        /* Ensure sections don't overlap */
-                        body .gallery-section {
-                            opacity: 1;
-                        }
-                        
-                        body .gallery-section:not(.active) {
-                            display: none !important;
-                            visibility: hidden;
-                            height: 0;
-                            overflow: hidden;
-                        }
-                        
-                        /* Add spacing between galleries when showing all */
-                        .gallery-separator {
-                            margin: 40px 0;
-                            border: 0;
-                            border-top: 2px solid #d3200a;
-                            opacity: 0.2;
-                            clear: both;
-                        }
-                        
-                        .gallery-section:not(.active) + .gallery-separator {
-                            display: none;
-                        }
-                        
-                        @keyframes fadeIn {
-                            from {
-                                opacity: 0;
-                                transform: translateY(10px);
-                            }
-                            to {
-                                opacity: 1;
-                                transform: translateY(0);
-                            }
-                        }
-                        
-                        .gallery-section h4 {
-                            background: linear-gradient(135deg, #d3200a 0%, #530e05 100%);
-                            color: white;
-                            padding: 15px 25px;
-                            border-radius: 8px;
-                            margin-bottom: 25px;
-                            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-                            font-size: 22px;
-                        }
-                        
-                        .gallery-section h4 span {
-                            color: white !important;
-                        }
-                        
-                        .gallery-count {
-                            text-align: center;
-                            color: #530e05;
-                            font-size: 16px;
-                            margin-top: 10px;
-                            font-style: italic;
-                        }
-                        
-                        @media (max-width: 768px) {
-                            .filter-buttons {
-                                gap: 8px;
-                            }
-                            
-                            .filter-btn {
-                                padding: 10px 18px;
-                                font-size: 14px;
-                            }
-                            
-                            .gallery-filter-section {
-                                padding: 20px 15px;
-                            }
-                            
-                            .gallery-section h4 {
-                                font-size: 18px;
-                                padding: 12px 18px;
-                            }
-                        }
-                    </style>
+
                     
                     <div class="gallery-filter-section">
                         <h3>Selecciona el Departamento que Deseas Ver</h3>
                         <div class="filter-buttons">
                             <button class="filter-btn active" data-filter="todos">Todos</button>
-                            <button class="filter-btn" data-filter="loft">Loft 2 PAX</button>
-                            <button class="filter-btn" data-filter="mono">Monoambiente 2 PAX</button>
-                            <button class="filter-btn" data-filter="4pax">4 Pasajeros</button>
-                            <button class="filter-btn" data-filter="5pax-jardin">5 Pasajeros Jardín</button>
-                            <button class="filter-btn" data-filter="6pax-montana">5 Pasajeros Montaña</button>
+                            <button class="filter-btn" data-filter="loft">Loft hasta 2 pasajeros</button>
+                            <button class="filter-btn" data-filter="mono">Monoambiente hasta 2 pasajeros</button>
+                            <button class="filter-btn" data-filter="4pax">Hasta 4 Pasajeros</button>
+                            <button class="filter-btn" data-filter="5pax-jardin">Hasta 5 Pasajeros Jardín</button>
+                            <button class="filter-btn" data-filter="6pax-montana">Hasta 5 Pasajeros Montaña</button>
                             <button class="filter-btn" data-filter="exteriores">Exteriores</button>
                         </div>
                         <div class="gallery-count" id="galleryCount"></div>
