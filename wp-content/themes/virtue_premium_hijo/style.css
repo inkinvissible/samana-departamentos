@@ -236,3 +236,108 @@ background-color: #530F06;
 a.fondoblanco:visited {
 color: #ffffff;
 }
+
+/* ESTILOS PARA PÁGINA ALQUILER TURÍSTICO */
+
+/* Contenedor principal */
+.alquiler-turistico-alojamiento-el-bolson #content {
+    width: 100%;
+}
+
+/* Mejora de disposición en desktop y pantallas grandes */
+@media (min-width: 992px) {
+    #content .row > .col-md-8 {
+        padding-right: 30px;
+        float: left;
+    }
+    
+    #content .row > .col-md-4 {
+        padding-left: 15px;
+        float: left;
+    }
+    
+    /* Mejorar el espaciado general en desktop */
+    .alquiler-turistico-alojamiento-el-bolson #content .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+/* Mejora de alineación en tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+    #content .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    #content .col-md-8,
+    #content .col-md-4 {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Mejora de alineación en mobile */
+@media (max-width: 767px) {
+    /* Asegurar padding consistente */
+    .alquiler-turistico-alojamiento-el-bolson #content .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    #content .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    #content .col-md-8,
+    #content .col-md-4,
+    #content .col-sm-12 {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        float: none;
+    }
+    
+    /* Centrar contenido de texto */
+    #content p,
+    #content ul,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5 {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    /* Mejorar el espaciado del slider en mobile */
+    .cycloneslider {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    
+    /* Centrar botón de consulta en mobile */
+    #content a[href*="whatsapp"] {
+        display: block !important;
+        text-align: center;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Ajustar imágenes para mobile */
+    #content img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Ajustar listas en mobile */
+    #content ul {
+        padding-left: 20px;
+    }
+}
