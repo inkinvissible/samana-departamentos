@@ -1,0 +1,43 @@
+@media (max-width: 768px) {
+    video{
+        height: 100%!important;
+        width: 100%!important;
+    }
+    section{
+        display: flex;
+        flex-direction: column!important;
+    }
+    .meaning-div{
+        padding-right: 0px!important;
+    }
+    .meaning-section h2{
+        text-align: center!important;
+    }
+    .video-text-div{
+        padding-left: 0px!important;
+        margin-top: 1.5em!important;
+        
+    }
+    .art-gallery-section p{
+        text-align: center!important;
+    }
+    /* Centrar galería en mobile */
+    .art-gallery-section #kad-wp-gallery40 {
+        all: unset!important;
+    position: relative!important;
+        width: 100%!important   ;
+    height: 200em!important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .art-gallery-section .g_item {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .art-component{
+        display: flex!important;
+        align-items: center!important;
+    justify-content: center!important;
+    }
+}
