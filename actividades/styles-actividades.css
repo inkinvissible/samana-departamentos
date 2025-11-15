@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+    .activities-div{
+        display: flex!important;
+        flex-direction: column-reverse!important;
+        
+    }
+    .activities-iframe{
+    height: 25em!important;
+    }
+}
