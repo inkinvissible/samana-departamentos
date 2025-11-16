@@ -4922,3 +4922,12 @@ html :where(.is-position-sticky) {
 .slick-next:before {
   color: #333!important;
 }
+.pdf-neon{
+    border: 10px solid red;
+    border-radius: 10px;
+    animation: neon 1.2s ease-in-out infinite;
+}
+ @keyframes neon {
+    0%, 100% { box-shadow: 0 0 5px red, 0 0 15px red; }
+    50%      { box-shadow: 0 0 20px red, 0 0 35px red; }
+  }
