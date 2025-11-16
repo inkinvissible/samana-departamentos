@@ -54,4 +54,7 @@
         width: 100%!important;
         height: 302px!important;
     }
+    p{
+        text-align: unset !important;
+    }
 }
