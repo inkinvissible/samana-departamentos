@@ -341,3 +341,245 @@ color: #ffffff;
         padding-left: 20px;
     }
 }
+
+/* =================================================================
+   FIXES: H4 CON SPAN DESALINEADOS EN MOBILE + TEXTOS MÁS LLAMATIVOS
+   ================================================================= */
+
+/* Fix para h4 con span en mobile - mejor alineación y padding */
+h4 {
+    display: block;
+    padding: 12px 15px;
+    margin: 1em 0 1em 0 !important;
+    line-height: 1.6 !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+h4 span {
+    display: inline;
+    line-height: inherit;
+}
+
+/* Textos más llamativos y visibles */
+h2, h3, h4 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-weight: 600 !important;
+}
+
+h2 {
+    color: #d3200a !important;
+    font-size: 32px !important;
+    border-bottom: 3px solid #d3200a;
+    padding-bottom: 10px;
+    margin-bottom: 20px !important;
+}
+
+h3 {
+    color: #cf2e2e !important;
+    font-size: 24px !important;
+    margin-top: 25px !important;
+    margin-bottom: 15px !important;
+}
+
+h4 {
+    color: #530e05 !important;
+    background: rgba(211, 32, 10, 0.05);
+    border-left: 4px solid #d3200a;
+    padding: 12px 15px !important;
+    margin: 20px 0 !important;
+}
+
+/* Párrafos más destacados */
+p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+p .bold, .bold {
+    font-weight: 800 !important;
+    color: #530e05;
+}
+
+/* Listas más atractivas */
+ul {
+    margin: 20px 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+ul li div {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+ul li svg {
+    flex-shrink: 0;
+    margin-top: 3px;
+    color: #00d084;
+}
+
+/* Mobile: mejor manejo de textos largos */
+@media (max-width: 767px) {
+    h4 {
+        padding: 15px 12px !important;
+        font-size: 20px !important;
+        line-height: 1.5 !important;
+        margin: 15px 0 !important;
+        word-break: break-word;
+    }
+    
+    h4 span {
+        display: inline;
+        word-wrap: break-word;
+    }
+    
+    h2 {
+        font-size: 26px !important;
+        padding-bottom: 8px;
+    }
+    
+    h3 {
+        font-size: 20px !important;
+    }
+    
+    p {
+        font-size: 15px;
+        text-align: left !important;
+    }
+}
+
+/* =================================================================
+   OPTIMIZACIÓN PÁGINA ALQUILER TURÍSTICO - MEJOR ENGAGEMENT
+   ================================================================= */
+
+/* Botones de CTA más destacados */
+a[href*="whatsapp"], 
+a.consultasyreservas {
+    background: linear-gradient(135deg, #d3200a 0%, #cf2e2e 100%) !important;
+    color: #fff002 !important;
+    padding: 18px 30px !important;
+    border-radius: 8px;
+    font-size: 1.3rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(211, 32, 10, 0.4);
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+    display: inline-block;
+    margin: 30px 0;
+    text-align: center;
+}
+
+a[href*="whatsapp"]:hover,
+a.consultasyreservas:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(211, 32, 10, 0.6);
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #cf2e2e 0%, #530e05 100%) !important;
+}
+
+/* Secciones colapsables para reducir contenido visible */
+.section-collapsible {
+    margin: 20px 0;
+}
+
+.section-toggle {
+    background: #f5f5f5;
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #d3200a;
+    transition: all 0.3s ease;
+}
+
+.section-toggle:hover {
+    background: rgba(211, 32, 10, 0.1);
+}
+
+.section-toggle-icon {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d3200a;
+    transition: transform 0.3s ease;
+}
+
+.section-toggle.active .section-toggle-icon {
+    transform: rotate(180deg);
+}
+
+.section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.section-content.active {
+    max-height: 2000px;
+}
+
+/* Destacar servicios con iconos visuales */
+ul[style*="list-style: none"] li,
+ul.servicios-list li {
+    background: #fff;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border-left: 3px solid #00d084;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+ul[style*="list-style: none"] li:hover,
+ul.servicios-list li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Reducir espacios innecesarios */
+.margintop30 + p + h2 {
+    margin-top: 20px !important;
+}
+
+/* Destacar información clave */
+.info-destacada {
+    background: linear-gradient(135deg, rgba(211, 32, 10, 0.1) 0%, rgba(83, 14, 5, 0.1) 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #d3200a;
+    margin: 25px 0;
+}
+
+.info-destacada h3 {
+    margin-top: 0 !important;
+}
+
+/* Mobile optimizations */
+@media (max-width: 767px) {
+    a[href*="whatsapp"], 
+    a.consultasyreservas {
+        width: 100% !important;
+        padding: 15px 20px !important;
+        font-size: 1.1rem !important;
+        margin: 20px 0;
+    }
+    
+    .section-toggle {
+        padding: 12px 15px;
+        font-size: 16px;
+    }
+    
+    ul[style*="list-style: none"] li,
+    ul.servicios-list li {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}
