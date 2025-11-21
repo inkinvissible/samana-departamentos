@@ -550,5 +550,39 @@ ul.servicios-list li:hover {
     .gallery-section h4 {
         padding: 12px 15px;
         font-size: 18px;
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    /* Eliminar espacios blancos en secciones de galería en mobile */
+    .gallery-section {
+        margin-top: 0 !important;
+        margin-bottom: 15px !important;
+        padding-top: 0 !important;
+    }
+    
+    .gallery-container {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 20px !important;
+        min-height: 0 !important;
+    }
+    
+    /* Ajustar el espacio del filtro en mobile */
+    .gallery-filter-section {
+        margin-top: 15px !important;
+        margin-bottom: 15px !important;
+        padding: 15px !important;
+    }
+    
+    /* Reducir padding superior de kad-wp-gallery en mobile */
+    .kad-wp-gallery {
+        padding-top: 5px !important;
+        margin-top: 0 !important;
+    }
+    
+    /* Asegurar que las separadores no causen espacio */
+    .gallery-separator {
+        margin: 20px 0 !important;
     }
 }

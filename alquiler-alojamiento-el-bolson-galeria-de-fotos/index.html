@@ -1104,7 +1104,6 @@
         }
 
         .gallery-container {
-            min-height: 400px;
             margin-bottom: 50px;
             position: relative;
             width: 100%;
@@ -1155,7 +1154,7 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-
+        }
         .gallery-section h4 {
             background: linear-gradient(135deg, #d3200a 0%, #530e05 100%);
             color: white;
@@ -1213,6 +1212,23 @@
             .nav-trigger-case {
                 font-size: 20px !important;
             }
+            
+            /* Eliminar espacios blancos en mobile */
+            .gallery-container {
+                margin-bottom: 20px !important;
+                min-height: 0 !important;
+            }
+            
+            .gallery-section {
+                margin-top: 0 !important;
+                margin-bottom: 15px !important;
+            }
+            
+            .gallery-section h4 {
+                margin-top: 10px !important;
+                margin-bottom: 15px !important;
+            }
+        }
         
         /* Collapsible sections styles */
         .section-collapsible {
@@ -2199,16 +2215,44 @@
                                         // Trigger isotope layout
                                         triggerIsotopeLayout();
 
-                                        // Scroll to top of gallery smoothly
+                                        // Scroll to gallery section with proper timing
                                         setTimeout(function () {
-                                            const filterSection = document.querySelector('.gallery-filter-section');
-                                            if (filterSection) {
+                                            const isMobile = window.innerWidth <= 767;
+                                            let scrollTarget;
+                                            
+                                            if (isMobile) {
+                                                // En mobile, scrollear a la primera galería visible
+                                                if (filter === 'todos') {
+                                                    // Si es "todos", buscar la primera sección visible
+                                                    scrollTarget = document.querySelector('.gallery-section.active');
+                                                } else {
+                                                    // Si es un filtro específico, scrollear a esa sección
+                                                    scrollTarget = document.querySelector(`.gallery-section.active[data-category="${filter}"]`);
+                                                }
+                                                
+                                                // Fallback al título h4 de la sección
+                                                if (!scrollTarget || scrollTarget.offsetHeight === 0) {
+                                                    scrollTarget = document.querySelector(`.gallery-section[data-category="${filter}"] h4`);
+                                                }
+                                            } else {
+                                                // En desktop, scrollear al título de la página
+                                                scrollTarget = document.querySelector('#pageheader');
+                                                if (!scrollTarget) {
+                                                    scrollTarget = document.querySelector('.gallery-filter-section');
+                                                }
+                                            }
+                                            
+                                            if (scrollTarget) {
+                                                // Calcular posición considerando header fijo
+                                                const headerHeight = isMobile ? 0 : 100;
+                                                const targetPosition = scrollTarget.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                                                
                                                 window.scrollTo({
-                                                    top: filterSection.offsetTop - 100,
+                                                    top: targetPosition,
                                                     behavior: 'smooth'
                                                 });
                                             }
-                                        }, 150);
+                                        }, 200);
                                     });
                                 });
 
