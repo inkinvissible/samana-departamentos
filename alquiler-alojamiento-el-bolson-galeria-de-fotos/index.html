@@ -20,7 +20,7 @@
         }</script>
     <script id="litespeed-webfont-lib" src="../wp-content/plugins/litespeed-cache/assets/js/webfontloader.min.js"
         defer></script>
-    <title>Galería de Fotos - SAMANÁ - Departamentos de Alquiler en el centro de El Bolsón</title>
+    <title>Nuestros Departamentos - SAMANÁ - Departamentos de Alquiler en el centro de El Bolsón</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" type="image/x-icon" href="../wp-content/uploads/2015/02/favicon.ico" />
@@ -37,9 +37,9 @@
     <meta property="og:locale" content="es_ES" />
     <meta property="og:type" content="article" />
     <meta property="og:title"
-        content="Galería de Fotos - SAMANÁ - Departamentos de Alquiler en el centro de El Bolsón" />
+        content="Nuestros Departamentos - SAMANÁ - Departamentos de Alquiler en el centro de El Bolsón" />
     <meta property="og:description"
-        content="Loft de Diseño para 2 PAX, Monoambiente Precioso para 2 PAX, Departamentos para 4 PAX con Vista al Jardín, Departamento hasta 5 Pasajeros con Vista al Jardín, Departamento para 6 PAX con Vista a las Montañas, Exteriores" />
+        content="Nuestros Departamentos turísticos: Monoambiente hasta 2 pasajeros, Loft hasta 3 pasajeros, Departamentos hasta 3 pasajeros vista jardín, Departamento hasta 5 pasajeros vista jardín, Departamento hasta 5 pasajeros vista montaña y Exteriores." />
     <meta property="og:url"
         content="https://www.samanadepartamentos.com.ar/alquiler-alojamiento-el-bolson-galeria-de-fotos/" />
     <meta property="og:site_name" content="SAMANÁ - Departamentos de Alquiler en el centro de El Bolsón" />
@@ -68,7 +68,7 @@
                 "@type": "WebPage",
                 "@id": "https://www.samanadepartamentos.com.ar/alquiler-alojamiento-el-bolson-galeria-de-fotos/#webpage",
                 "url": "https://www.samanadepartamentos.com.ar/alquiler-alojamiento-el-bolson-galeria-de-fotos/",
-                "name": "Galer\u00eda de Fotos - SAMAN\u00c1 - Departamentos de Alquiler en el centro de El Bols\u00f3n",
+                "name": "Nuestros Departamentos - SAMAN\u00c1 - Departamentos de Alquiler en el centro de El Bols\u00f3n",
                 "isPartOf": {
                     "@id": "https://www.samanadepartamentos.com.ar/#website"
                 },
@@ -799,7 +799,7 @@
         }
 
         #nav-second ul.sf-menu>li {
-            width: 14%;
+            width: 16%;
         }
 
         #nav-main .sf-menu ul,
@@ -1030,7 +1030,7 @@
             color: white;
             padding: 16px 24px;
             cursor: pointer;
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 400;
             transition: all 0.2s ease;
             font-family: Arial, Helvetica, sans-serif;
@@ -1178,7 +1178,7 @@
 
             .filter-btn {
                 padding: 14px 20px;
-                font-size: 14px;
+                font-size: 18px;
             }
 
             .filter-btn.active {
@@ -1200,6 +1200,100 @@
                 font-size: 30px;
 
             }
+            
+            .kad-nav-inner .kad-mnav,
+            .kad-mobile-nav .kad-nav-inner li a,
+            .nav-trigger-case {
+                font-size: 20px !important;
+            }
+        }
+        
+        /* Collapsible sections styles */
+        .section-collapsible {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .section-toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #f8f9fa;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        .section-toggle:hover {
+            background: #e9ecef;
+        }
+
+        .section-toggle.active {
+            background: #d3200a;
+            color: white;
+        }
+
+        .section-toggle.active h3,
+        .section-toggle.active h4,
+        .section-toggle.active p {
+            color: white !important;
+        }
+
+        .section-toggle-icon {
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .section-toggle.active .section-toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .section-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: white;
+        }
+
+        .section-content.active {
+            max-height: 1000px;
+            padding: 20px;
+        }
+
+        .servicios-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .servicios-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            padding: 5px 0;
+        }
+
+        .servicios-list li div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .servicios-list svg {
+            color: #d3200a;
+            flex-shrink: 0;
+        }
+
+        .info-destacada {
+            position: relative;
+        }
+
+        .margintop30 {
+            margin-top: 30px;
         }
     </style>
     <!--[if lt IE 9]>
@@ -1244,14 +1338,11 @@
                         <div id="mobile_menu_collapse" class="kad-nav-collapse collapse mobile_menu_collapse">
                             <ul id="menu-menu1" class="kad-mnav">
                                 <li class="menu-inicio menu-item-22"><a href="../index.html">Inicio</a></li>
-                                <li class="menu-alquilerturstico menu-item-70"><a
-                                        href="../alquiler-turistico-alojamiento-el-bolson/index.html">Alquiler
-                                        Turístico</a></li>
 
                                 <li class="menu-actividades menu-item-23"><a
                                         href="../actividades/index.html">Actividades</a></li>
                                 <li class="menu-fotos current-menu-item current_page_item menu-item-27"><a
-                                        href="index.html">Fotos</a></li>
+                                        href="index.html">Nuestros departamentos</a></li>
                                 <li class="menu-opinionesdeclientes menu-item-29"><a
                                         href="../alquiler-alojamiento-el-bolson-testimonios/index.html">Opiniones de
                                         Clientes</a></li>
@@ -1269,15 +1360,12 @@
                     <nav id="nav-second" class="clearfix" role="navigation">
                         <ul id="menu-menu1-1" class="sf-menu">
                             <li class="menu-inicio menu-item-22"><a href="../index.html">Inicio</a></li>
-                            <li class="menu-alquilerturstico menu-item-70"><a
-                                    href="../alquiler-turistico-alojamiento-el-bolson/index.html">Alquiler Turístico</a>
-                            </li>
 
                             <li class="menu-actividades menu-item-23"><a
                                     href="../actividades/index.html">Actividades</a>
                             </li>
                             <li class="menu-fotos current-menu-item current_page_item menu-item-27"><a
-                                    href="index.html">Fotos</a>
+                                    href="index.html">Nuestros departamentos</a>
                             </li>
                             <li class="menu-opinionesdeclientes menu-item-29"><a
                                     href="../alquiler-alojamiento-el-bolson-testimonios/index.html">Opiniones</a></li>
@@ -1295,7 +1383,7 @@
                 <div class="container">
                     <div class="page-header">
                         <h1>
-                            Galería de Fotos</h1>
+                            Nuestros Departamentos</h1>
                     </div>
                 </div>
             </div>
@@ -1307,6 +1395,81 @@
                         </div>
 
 
+
+                        <div class="info-destacada" style="background: #fff; padding: 30px; border: 1px solid #ddd; margin-bottom: 35px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);">
+                            <p style="font-size: 18px; margin-bottom: 0;"><span class="bold">Alquiler diario todo el año</span> en el corazón de la <span class="bold">Patagonia</span>. Espacios confortables, totalmente equipados y con la mejor atención personalizada.</p>
+                            
+                            <h2 class="margintop30">Nuestros Departamentos</h2>
+                            
+                            <div class="section-collapsible">
+                                <div class="section-toggle" onclick="toggleSection('dept-5')">
+                                    <div>
+                                        <h3 style="margin: 0; display: inline;">Departamento hasta 5 personas</h3>
+                                        <p style="margin: 5px 0 0 0; font-size: 14px; color: #666;">45m² • 2 ambientes • Completamente equipados</p>
+                                    </div>
+                                    <span class="section-toggle-icon">▼</span>
+                                </div>
+                                <div class="section-content" id="dept-5">
+                                    <p style="margin-top: 15px;">Ideales para familias o grupos. Departamentos de dos ambientes con:</p>
+                                    <ul style="list-style: none" class="servicios-list">
+                                        <li><div><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" /></svg>Dormitorio amplio con placard</div></li>
+                                        <li><div><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" /></svg>Living-comedor totalmente equipado</div></li>
+                                        <li><div><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" /></svg>Baño completo moderno</div></li>
+                                        <li><div><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" /></svg>Cocina completa con vajilla</div></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="section-collapsible">
+                                <div class="section-toggle" onclick="toggleSection('mono-loft')">
+                                    <div>
+                                        <h3 style="margin: 0; display: inline;">Monoambientes y Lofts</h3>
+                                        <p style="margin: 5px 0 0 0; font-size: 14px; color: #666;">Hasta 2-3 personas • Espacios únicos</p>
+                                    </div>
+                                    <span class="section-toggle-icon">▼</span>
+                                </div>
+                                <div class="section-content" id="mono-loft">
+                                    <p style="margin-top: 15px;">Perfectos para parejas. Monoambiente amplio con patios y todas las comodidades.</p>
+                                </div>
+                            </div>
+
+                            <div class="section-collapsible">
+                                <div class="section-toggle" onclick="toggleSection('servicios')">
+                                    <div>
+                                        <h4 style="margin: 0; display: inline; background: none; border: none; padding: 0;"><span>Servicios Incluidos</span></h4>
+                                    </div>
+                                    <span class="section-toggle-icon">▼</span>
+                                </div>
+                                <div class="section-content" id="servicios">
+                                    <ul class="servicios-list" style="margin-top: 15px;">
+                                        <li>2 TV LED + WiFi alta velocidad</li>
+                                        <li>Cocina equipada + vajilla completa</li>
+                                        <li>Heladera con freezer</li>
+                                        <li>Cafetera y tostadora</li>
+                                        <li>Secador de pelo</li>
+                                        <li>Ropa blanca (cama y baño)</li>
+                                        <li>Artículos de limpieza</li>
+                                        <li>Ventilación cruzada</li>
+                                        <li>Ventanales con aislamiento</li>
+                                        <li>Estacionamiento privado</li>
+                                        <li>Calefacción en todos los ambientes</li>
+                                        <li>Máxima presión 24hs</li>
+                                        <li>Se aceptan mascotas</li>
+                                        <li>Desayuno incluido</li>
+                                    </ul>
+                                    
+                                    <h5 style="margin-top: 20px; color: #d3200a;">Servicios Opcionales</h5>
+                                    <ul style="list-style: circle; padding-left: 25px;">
+                                        <li>Servicio de limpieza adicional</li>
+                                        <li>Servicio de lavandería</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 20px;">
+                                <a href="https://api.whatsapp.com/send?phone=5492944706755&text=Hola, quiero consultar disponibilidad y precios" class="bold">Consultá Disponibilidad y Precios</a>
+                            </div>
+                        </div>
 
                         <div class="gallery-filter-section">
                             <h3>Selecciona el Departamento que Deseas Ver</h3>
@@ -1492,7 +1655,7 @@
                             </div>
 
                             <div class="gallery-section active" data-category="4pax">
-                                <h4><span style="color: white;">Departamentos hasta 3 pasajeros con Vista al
+                                <h4><span style="color: white;">Departamento de dos ambientes hasta 3 pasajeros con Vista al
                                         Jardín</span></h4>
                                 <div id="kad-wp-gallery11"
                                     class="kad-wp-gallery init-isotope kad-light-wp-gallery clearfix rowtight"
@@ -1569,31 +1732,31 @@
                                                     src="../wp-content/uploads/2015/02/091-240x240.jpg" alt=""
                                                     class="light-dropshaddow" /></a></div>
                                     </div>
-                                    <div class="tcol-lg-25 tcol-md-25 tcol-sm-3 tcol-xs-4 tcol-ss-6 g_item">
+                                    <!--<div class="tcol-lg-25 tcol-md-25 tcol-sm-3 tcol-xs-4 tcol-ss-6 g_item">
                                         <div class="grid_item kt_item_fade_in kad_gallery_fade_in gallery_item"><a
                                                 href="../wp-content/uploads/2015/02/111.jpg" rel="lightbox[pp_gal]"
                                                 class="lightboxhover">
                                                 <img decoding="async"
                                                     src="../wp-content/uploads/2015/02/111-240x240.jpg" alt=""
-                                                    class="light-dropshaddow" /></a></div>
+                                                    class="light-dropshaddow" /></a></div>-->
                                     </div>
                                 </div>
                                 <hr class="gallery-separator">
                             </div>
 
                             <div class="gallery-section active" data-category="5pax-jardin">
-                                <h4><span style="color: white;">Departamento hasta 5 Pasajeros con Vista al
+                                <h4><span style="color: white;">Departamento de dos ambientes hasta 4 Pasajeros con Vista al
                                         Jardín</span></h4>
                                 <div id="kad-wp-gallery60"
                                     class="kad-wp-gallery init-isotope kad-light-wp-gallery clearfix rowtight"
                                     data-fade-in="1" data-iso-selector=".g_item" data-iso-style="masonry">
                                     <div class="tcol-lg-25 tcol-md-25 tcol-sm-3 tcol-xs-4 tcol-ss-6 g_item">
-                                        <div class="grid_item kt_item_fade_in kad_gallery_fade_in gallery_item"><a
+                                        <!--<div class="grid_item kt_item_fade_in kad_gallery_fade_in gallery_item"><a
                                                 href="../wp-content/uploads/2015/02/018.jpg" rel="lightbox[pp_gal]"
                                                 class="lightboxhover">
                                                 <img decoding="async"
                                                     src="../wp-content/uploads/2015/02/018-240x240.jpg" alt=""
-                                                    class="light-dropshaddow" /></a></div>
+                                                    class="light-dropshaddow" /></a></div>-->
                                     </div>
                                     <div class="tcol-lg-25 tcol-md-25 tcol-sm-3 tcol-xs-4 tcol-ss-6 g_item">
                                         <div class="grid_item kt_item_fade_in kad_gallery_fade_in gallery_item"><a
@@ -1688,7 +1851,7 @@
                             </div>
 
                             <div class="gallery-section active" data-category="6pax-montana">
-                                <h4><span style="color: white;">Departamento para 5 pasajeros con Vista a las
+                                <h4><span style="color: white;">Departamento de dos ambientes hasta 5 pasajeros con Vista a las
                                         Montañas</span></h4>
                                 <div id="kad-wp-gallery70"
                                     class="kad-wp-gallery init-isotope kad-light-wp-gallery clearfix rowtight"
@@ -1854,14 +2017,14 @@
                                                     src="../wp-content/uploads/2015/02/048-240x240.jpg" alt=""
                                                     class="light-dropshaddow" /></a></div>
                                     </div>
-                                    <div class="tcol-lg-25 tcol-md-25 tcol-sm-3 tcol-xs-4 tcol-ss-6 g_item">
+                                    <!--<div class="tcol-lg-25 tcol-md-25 tcol-sm-3 tcol-xs-4 tcol-ss-6 g_item">
                                         <div class="grid_item kt_item_fade_in kad_gallery_fade_in gallery_item"><a
                                                 href="../wp-content/uploads/2015/02/058.jpg" rel="lightbox[pp_gal]"
                                                 class="lightboxhover">
                                                 <img decoding="async"
                                                     src="../wp-content/uploads/2015/02/058-240x240.jpg" alt=""
                                                     class="light-dropshaddow" /></a></div>
-                                    </div>
+                                    </div>-->
                                     <div class="tcol-lg-25 tcol-md-25 tcol-sm-3 tcol-xs-4 tcol-ss-6 g_item">
                                         <div class="grid_item kt_item_fade_in kad_gallery_fade_in gallery_item"><a
                                                 href="../wp-content/uploads/2015/02/068.jpg" rel="lightbox[pp_gal]"
@@ -1894,14 +2057,14 @@
                                                     src="../wp-content/uploads/2015/02/095-240x240.jpg" alt=""
                                                     class="light-dropshaddow" /></a></div>
                                     </div>
-                                    <div class="tcol-lg-25 tcol-md-25 tcol-sm-3 tcol-xs-4 tcol-ss-6 g_item">
+                                    <!--<div class="tcol-lg-25 tcol-md-25 tcol-sm-3 tcol-xs-4 tcol-ss-6 g_item">
                                         <div class="grid_item kt_item_fade_in kad_gallery_fade_in gallery_item"><a
                                                 href="../wp-content/uploads/2015/02/105.jpg" rel="lightbox[pp_gal]"
                                                 class="lightboxhover">
                                                 <img decoding="async"
                                                     src="../wp-content/uploads/2015/02/105-240x240.jpg" alt=""
                                                     class="light-dropshaddow" /></a></div>
-                                    </div>
+                                    </div>-->
                                     <div class="tcol-lg-25 tcol-md-25 tcol-sm-3 tcol-xs-4 tcol-ss-6 g_item">
                                         <div class="grid_item kt_item_fade_in kad_gallery_fade_in gallery_item"><a
                                                 href="../wp-content/uploads/2024/02/Para-fotoshop-2.jpg"
@@ -2149,6 +2312,25 @@
             id="kadence_plugins-js" defer data-deferred="1"></script>
         <script type="text/javascript" src="../wp-content/themes/virtue_premium/assets/js/main.js" id="kadence_main-js"
             defer data-deferred="1"></script>
+        
+        <script>
+        function toggleSection(id) {
+            const content = document.getElementById(id);
+            const toggle = content.previousElementSibling;
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                toggle.classList.remove('active');
+            } else {
+                // Cerrar otras secciones
+                document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
+                document.querySelectorAll('.section-toggle').forEach(el => el.classList.remove('active'));
+                // Abrir la seleccionada
+                content.classList.add('active');
+                toggle.classList.add('active');
+            }
+        }
+        </script>
     </div>
 </body>
 <!-- Mirrored from www.samanadepartamentos.com.ar/alquiler-alojamiento-el-bolson-galeria-de-fotos/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Oct 2025 12:26:08 GMT -->
