@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+
+
+
 .wp-block-archives {
   box-sizing: border-box
 }
@@ -4931,3 +4934,23 @@ html :where(.is-position-sticky) {
     0%, 100% { box-shadow: 0 0 5px red, 0 0 15px red; }
     50%      { box-shadow: 0 0 20px red, 0 0 35px red; }
   }
+
+@media (max-width: 480px) {
+  .booking-text-div{
+    padding: 0px!important;
+    width: auto!important;
+    
+  }
+  .booking-section{
+    flex-direction: column!important;
+  }
+  .booking-text-div p{
+    text-align: center!important;
+  }
+  .stars{
+    align-self: center!important;
+  }
+  
+}
+
+
