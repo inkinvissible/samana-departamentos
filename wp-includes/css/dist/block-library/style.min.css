@@ -4947,6 +4947,9 @@ html :where(.is-position-sticky) {
   .booking-text-div p{
     text-align: center!important;
   }
+  .booking-text-div h4{
+    text-align: center!important;
+  }
   .stars{
     align-self: center!important;
   }
